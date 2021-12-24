@@ -1,0 +1,368 @@
+/*
+@ App Name - Crypto Currency Update
+@ Version - 1.0
+@ Developer Name - Zisanur Haqoe
+@ Description - Crypto Currency Market Realtime Updating Data Will Dsiplay Here
+*/
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: bahnschrift;
+  font-size: 14px;
+  font-weight: 300;
+}
+h4,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0px 100px;
+  background: rgb(50, 52, 63);
+  color: white;
+}
+
+main {
+  width: 100%;
+  float: left;
+  padding: 20px 100px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  float: left;
+}
+table thead,
+tbody {
+  float: left;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  border-radius: 2px;
+  padding: 0px 10px;
+  padding-top: 4px;
+  justify-content: space-between;
+}
+table thead {
+  background: rgb(50, 52, 63);
+  border-bottom: 2px solid rgb(0, 187, 100);
+  color: white;
+}
+table tbody:nth-child(even) {
+  background: rgb(248, 248, 248);
+}
+table td {
+  border: none;
+  padding: 5px;
+}
+.search {
+  float: left;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.search input {
+  outline: none;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  border-radius: 2px;
+  width: 250px;
+}
+table thead td {
+  font-weight: 400;
+}
+table img {
+  height: 30px;
+  width: 30px;
+}
+.rank {
+  width: 50px;
+}
+.name {
+  width: 200px;
+}
+.symbol {
+  width: 100px;
+  text-transform: uppercase;
+}
+.icon {
+  width: 40px;
+  text-align: center;
+}
+.currentPrice {
+  width: 100px;
+  text-align: right;
+}
+.change {
+  width: 120px;
+  text-align: right;
+}
+.high {
+  text-align: right;
+  width: 120px;
+}
+.low {
+  text-align: right;
+  width: 120px;
+}
+.total {
+  text-align: right;
+  width: 150px;
+}
+.red {
+  color: red;
+}
+.green {
+  color: rgb(0, 187, 100);
+}
+
+.footer {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+  background: rgb(241, 241, 241);
+}
+.footer span {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-bottom: 3px;
+  margin-right: 2px;
+}
+.link {
+  text-decoration: none;
+  color: rgb(255, 1, 192);
+  margin-left: 5px;
+  transition: 0.1s;
+  font-size: 14px;
+}
+.link:hover {
+  color: rgb(255, 1, 192);
+  font-size: 13.5px;
+}
+
+@media screen and (max-width: 360px) {
+  * {
+    font-size: 12px;
+  }
+  .header {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .header h4 {
+    font-size: 18px;
+  }
+  .header p,
+  a {
+    font-size: 12px;
+  }
+
+  main {
+    padding: 0px;
+  }
+  table tbody,
+  thead {
+    display: flex;
+    height: 40px;
+    padding-top: 4px;
+  }
+  table img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .rank {
+    display: none;
+  }
+  .icon {
+    width: 12%;
+    text-align: left;
+  }
+  .symbol {
+    display: none;
+  }
+  .currentPrice {
+    width: 28%;
+    text-align: right;
+  }
+  .name {
+    width: 40%;
+  }
+  .change {
+    width: 20%;
+  }
+  .total {
+    display: none;
+  }
+  .high {
+    display: none;
+  }
+  .low {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  * {
+    font-size: 12px;
+  }
+  .header {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .header h4 {
+    font-size: 18px;
+  }
+  .header p,
+  a {
+    font-size: 12px;
+  }
+
+  main {
+    padding: 0px;
+  }
+  table thead,
+  tbody {
+    display: flex;
+    height: 40px;
+    padding-top: 5px;
+  }
+  table img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .rank {
+    display: none;
+  }
+  .icon {
+    text-align: left;
+  }
+  .symbol {
+    width: 20%;
+  }
+  .currentPrice {
+    width: 28%;
+    text-align: right;
+  }
+  .name {
+    width: 40%;
+  }
+  .change {
+    width: 20%;
+  }
+  .total {
+    display: none;
+  }
+  .high {
+    display: none;
+  }
+  .low {
+    display: none;
+  }
+}
+@media screen and (max-width: 1020px) {
+  * {
+    font-size: 12px;
+  }
+  .header {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .header h4 {
+    font-size: 18px;
+  }
+  .header p,
+  a {
+    font-size: 12px;
+  }
+
+  main {
+    padding: 0px;
+  }
+  table thead,
+  tbody {
+    display: flex;
+    height: 40px;
+    padding-top: 4px;
+  }
+  table img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .rank {
+    display: none;
+  }
+  .icon {
+    width: 12%;
+    text-align: left;
+  }
+  .currentPrice {
+    width: 28%;
+    text-align: right;
+  }
+  .name {
+    width: 30%;
+  }
+  .change {
+    width: 20%;
+  }
+  .total {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  * {
+    font-size: 12px;
+  }
+  .header {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .header h4 {
+    font-size: 18px;
+  }
+  .header p,
+  a {
+    font-size: 12px;
+  }
+
+  main {
+    padding: 0px;
+  }
+  table thead,
+  tbody {
+    display: flex;
+    height: 40px;
+    padding-top: 4px;
+  }
+  table img {
+    width: 20px;
+    height: 20px;
+  }
+}
